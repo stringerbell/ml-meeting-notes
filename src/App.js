@@ -35,7 +35,7 @@ class App extends Component {
     });
     setTimeout(() => {
       this.setState({
-        notes: '',
+        notes: this.getSummary(),
         saving: false,
         successMessage: this.getSuccessMessage(),
       });
@@ -56,8 +56,31 @@ class App extends Component {
       this.setState({
         successMessage: '',
       });
-    }, 2000);
-    return messages[Math.floor(Math.random() * messages.length)];
+    }, 5000);
+
+    return this.randomItem(messages);
+  };
+
+  getSummary = () => {
+    const summaries = [
+      'Overpaid executive talked about synergy for 45 min',
+      "Bob. We don't care about your cat.",
+      'I held in a fart for this?',
+      'One full hour closer to the sweet release of death',
+      'Ended up on youtube again looking at funny cat videos',
+      "Literally no way I'm ever going to get that time back. Ever.",
+      'We may have nailed down the color to paint the bike shed but ' +
+        "we'll follow up and revisit the decision offline and again in " +
+        "the next meeting where we'll be rehashing all the points we didn't make again.",
+      'Pretty sure this meeting is because Bob likes to hear the sound of his own voice.',
+      "Don't worry, you'll be able to make more notes in the next meeting",
+    ];
+
+    return this.randomItem(summaries);
+  };
+
+  randomItem = (array) => {
+    return array[Math.floor(Math.random() * array.length)];
   };
 
   handleChange = ({ target }) => {
