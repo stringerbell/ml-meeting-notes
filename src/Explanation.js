@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from './spinner.gif'
 
 export default function Explanation({saveNotes, saving, successMessage}) {
   return (
@@ -14,7 +15,7 @@ export default function Explanation({saveNotes, saving, successMessage}) {
               onClick={saveNotes}
               disabled={saving}
           >
-            {saving && <img alt={'loading-spinner'} src={'/spinner.gif'} width={55} />}
+            {saving && <img alt={'loading-spinner'} src={Image} width={55} />}
             {!saving && 'Save'}
           </button>
         </p>
