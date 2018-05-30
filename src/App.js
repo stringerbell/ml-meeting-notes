@@ -95,7 +95,9 @@ class App extends Component {
         "                     \\          \n" +
         "                      \\     \n" +
         "\n" +
-        "\n"
+        "\n",
+        "Seems like your meeting sucks. Would you like some help with that?\n" +
+        "https://i.giphy.com/media/13V60VgE2ED7oc/giphy.webp"
     ];
 
     return this.randomItem(summaries);
