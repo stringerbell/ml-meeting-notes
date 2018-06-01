@@ -3,8 +3,8 @@ import React from 'react';
 export default function Intro({ seen, toggleIntro }) {
   if (seen) {
     return (
-      <div style={{ float: 'left', paddingTop: '1em' }}>
-        <a href={'#'} onClick={toggleIntro}>
+      <div style={{ width: 1 }}>
+        <a style={{display: 'flex'}} href={'#'} onClick={toggleIntro}>
           About
         </a>
       </div>

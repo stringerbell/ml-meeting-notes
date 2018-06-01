@@ -70,34 +70,34 @@ class App extends Component {
       'Ended up on youtube again looking at funny cat videos',
       "Literally no way I'm ever going to get that time back. Ever.",
       'We may have nailed down the color to paint the bike shed but ' +
-        "we'll follow up and revisit the decision offline and again in " +
-        "the next meeting where we'll be rehashing all the points we didn't make again.",
+      "we'll follow up and revisit the decision offline and again in " +
+      "the next meeting where we'll be rehashing all the points we didn't make again.",
       'Pretty sure this meeting is because "Bob" likes to hear the sound of his own voice.',
       "Don't worry, you'll be able to make more notes in the next meeting",
       'Crud! I missed the last part, try again',
       'Sorry, I fell asleep reading that. Take notes of something more exciting.',
       'Skinless chicken or turkey breasts\n' +
-        'Ground turkey or chicken\n' +
-        'Salmon, halibut, trout, mackerel, or your favorite seafood\n' +
-        'Reduced-sodium lunchmeat (turkey, roast beef)',
+      'Ground turkey or chicken\n' +
+      'Salmon, halibut, trout, mackerel, or your favorite seafood\n' +
+      'Reduced-sodium lunchmeat (turkey, roast beef)',
       'I made a dragon while you were taking notes: here you go:\n' +
-        '                      ,-,-      \n' +
-        '                     / / |      \n' +
-        "   ,-'             _/ / /       \n" +
-        "  (-_          _,-' `Z_/        \n" +
-        '   "#:      ,-\'_,-.    \\  _     \n' +
-        "    #'    _(_-'_()\\     \\\" |    \n" +
-        "  ,--_,--'                 |    \n" +
-        ' / ""                      L-\'\\ \n' +
-        ' \\,--^---v--v-._        /   \\ | \n' +
-        "   \\_________________,-'      | \n" +
-        '                    \\           \n' +
-        '                     \\          \n' +
-        '                      \\     \n' +
-        '\n' +
-        '\n',
+      '                      ,-,-      \n' +
+      '                     / / |      \n' +
+      "   ,-'             _/ / /       \n" +
+      "  (-_          _,-' `Z_/        \n" +
+      '   "#:      ,-\'_,-.    \\  _     \n' +
+      "    #'    _(_-'_()\\     \\\" |    \n" +
+      "  ,--_,--'                 |    \n" +
+      ' / ""                      L-\'\\ \n' +
+      ' \\,--^---v--v-._        /   \\ | \n' +
+      "   \\_________________,-'      | \n" +
+      '                    \\           \n' +
+      '                     \\          \n' +
+      '                      \\     \n' +
+      '\n' +
+      '\n',
       'Seems like your meeting sucks. Would you like some help with that?\n' +
-        'https://i.giphy.com/media/13V60VgE2ED7oc/giphy.webp',
+      'https://i.giphy.com/media/13V60VgE2ED7oc/giphy.webp',
     ];
 
     return this.randomItem(summaries);
@@ -114,11 +114,15 @@ class App extends Component {
   };
 
   handleFocus = () => {
-    document.getElementById('explanation').classList.add('dimmed');
+    let classlist = document.getElementById('explanation').classList;
+    classlist.add('dimmed');
+    classlist.remove('undimmed');
   };
 
   handleBlur = () => {
-    document.getElementById('explanation').classList.remove('dimmed');
+    let classlist = document.getElementById('explanation').classList;
+    classlist.remove('dimmed');
+    classlist.add('undimmed');
   };
 
   toggleIntro = () => {

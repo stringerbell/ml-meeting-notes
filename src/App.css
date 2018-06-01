@@ -92,7 +92,23 @@ textarea:disabled {
   opacity: 0.2;
 }
 
-.dimmed { opacity: 0.1; }
+.undimmed {
+  animation: undimmed ease-in 0.2s forwards;
+}
+
+@keyframes undimmed {
+  0%   { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+.dimmed {
+  animation: dimmed ease-in 0.2s forwards;
+}
+
+@keyframes dimmed {
+  0%   { opacity: 1; }
+  100% { opacity: 0.2; }
+}
 
 .btn {
   width: 140px;

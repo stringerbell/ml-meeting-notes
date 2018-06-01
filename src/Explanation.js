@@ -3,7 +3,7 @@ import Image from './spinner.gif'
 
 export default function Explanation({saveNotes, saving, successMessage}) {
   return (
-      <div id={'explanation'}>
+      <div id={'explanation'} className={'undimmed'}>
         <h1>Minimalist meeting notes</h1>
         <h5>
           Write your meeting notes below. (press ⌘+S to save, or press the
